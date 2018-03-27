@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="loginForm" type="com.dihar.common.login.form.LoginForm" />
+		<form-bean name="DsaLoginForm" type="com.dihar.dsa.form.DsaLoginForm" />
+		<form-bean name="directorLoginForm" type="com.dihar.director.form.DirectorLoginForm" />
+		<form-bean name="DrdsLoginForm" type="com.dihar.drds.form.DrdsLoginForm" />
+		<form-bean name="DrtcLoginForm" type="com.dihar.drtc.form.DrtcLoginForm" />
+		<form-bean name="AdminLoginForm" type="com.dihar.admin.form.AdminLoginForm" />
+		<form-bean name="RootLoginForm" type="com.dihar.root.form.RootLoginForm" />
+	</form-beans>
+	<action-mappings>
+		<action name="loginForm" path="/login"
+			type="com.dihar.common.login.action.LoginAction" scope="request"
+			input="/Welcome.jsp">
+			<forward name="failure" path="/Welcome.jsp" redirect="true" />
+			<forward name="success" path="/DiharHome.html" redirect="true" />
+		</action>
+		
+		<action name="DsaLoginForm" path="/dsalogin"
+			type="com.dihar.dsa.action.LoginAction" scope="request"
+			input="/dsalogin.jsp">
+			<forward name="failure" path="/dsalogin.jsp" redirect="true" />
+			<forward name="success" path="/FileUpload.html" redirect="true" />
+		</action>
+		
+		<action name="directorLoginForm" path="/directorlogin"
+			type="com.dihar.director.action.LoginAction" scope="request"
+			input="/directorlogin.jsp">
+			<forward name="failure" path="/directorlogin.jsp" redirect="true" />
+			<forward name="success" path="/FileUpload.html" redirect="true" />
+		</action>
+		
+		<action name="DrdsLoginForm" path="/drdslogin"
+			type="com.dihar.drds.action.LoginAction" scope="request"
+			input="/drdslogin.jsp">
+			<forward name="failure" path="/drdslogin.jsp" redirect="true" />
+			<forward name="success" path="/FileUpload.html" redirect="true" />
+		</action>
+		
+		<action name="DrtcLoginForm" path="/drtclogin"
+			type="com.dihar.drtc.action.LoginAction" scope="request"
+			input="/directorlogin.jsp">
+			<forward name="failure" path="/drtclogin.jsp" redirect="true" />
+			<forward name="success" path="/FileUpload.html" redirect="true" />
+		</action>
+		
+		<action name="AdminLoginForm" path="/adminlogin"
+			type="com.dihar.admin.action.LoginAction" scope="request"
+			input="/adminlogin.jsp">
+			<forward name="failure" path="/adminlogin.jsp" redirect="true" />
+			<forward name="success" path="/FileUpload.html" redirect="true" />
+		</action>
+		
+		<action name="RootLoginForm" path="/rootlogin"
+			type="com.dihar.root.action.LoginAction" scope="request"
+			input="/rootlogin.jsp">
+			<forward name="failure" path="/rootlogin.jsp" redirect="true" />
+			<forward name="success" path="/roothome.html" redirect="true" />
+		</action>
+	</action-mappings>
+</struts-config>
