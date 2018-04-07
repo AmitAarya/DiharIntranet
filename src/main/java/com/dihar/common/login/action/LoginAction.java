@@ -8,6 +8,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dihar.common.login.dao.LoginDao;
 import com.dihar.common.login.form.LoginForm;
 
 public class LoginAction extends Action {
@@ -17,9 +18,7 @@ public class LoginAction extends Action {
 			throws Exception {
 		LoginForm loginForm = (LoginForm) form;
 
-		if (loginForm.getUserName() == null || loginForm.getPassword() == null
-				|| !loginForm.getUserName().equalsIgnoreCase("Dihar")
-				|| !loginForm.getPassword().equals("123")) {
+		if ( new LoginDao().isVerifyLoginData(loginForm.getUserName(),loginForm.getPassword())) {   
 			return mapping.findForward("failure");
 		} else
 			return mapping.findForward("success");

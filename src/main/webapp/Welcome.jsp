@@ -16,13 +16,14 @@
 
 </head>
 
-<body background="images/bgwinter.JPG">
+<body background="images/bg_new.JPG">
             <p align="center"><font size="7" color="#ff3300">WELCOME TO DIHAR NETWORK</font></p>
 	<!-- <div class="cont"> -->
 		<div class="demo">
 			<div class="login">
 			<div class="login__check"></div>
 				<div class="login__form">
+					
 					<html:form action="/login" focus="userName">
 						<!-- <form action="/login" focus="login__input name"> -->
 						<div class="login__row">

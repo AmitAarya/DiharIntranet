@@ -1,130 +1,58 @@
 package com.dihar.common;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.sql.Blob;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.imageio.ImageIO;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.dihar.utils.ConfigManager;
+public class DbConnection {
+	private static Logger logger = LoggerFactory.getLogger(DbConnection.class);
+	private static DbConnection dbconnection = null;
+	// private static Object mutex= new Object();
+	private static Connection con = null;
 
-public class DBConnection {
-	private static Logger logger = LoggerFactory.getLogger(DBConnection.class);
-	private static DBConnection dbconnection = null;
-	//private static Object mutex= new Object();
-	private static Connection conLms = null;
-	private static Connection conDge = null;
-	private static Connection conIge = null;
-	private static Connection conSle = null;
-	private static Connection conOla = null;
-	private DBConnection(){}
-	
-	public static DBConnection getInstance() {
+	private DbConnection() {
+	}
+
+	public static DbConnection getInstance() {
 		if (dbconnection == null) {
-			synchronized (DBConnection.class){
-				if(dbconnection==null)
-					dbconnection= new DBConnection();
+			synchronized (DbConnection.class) {
+				if (dbconnection == null)
+					dbconnection = new DbConnection();
 			}
 		}
-			return dbconnection;		
+		return dbconnection;
 	}
 
-	public Connection getDBConnectionLms() {
-		try {
-			if (conLms == null) {
-				String url = ConfigManager.getProperty("DBConURL")+"/"+ConfigManager.getProperty("DBLMS");
-				String user = ConfigManager.getProperty("DBConnUser");
-				String password = ConfigManager.getProperty("DBConnPwd");
-				String driver = ConfigManager.getProperty("DBConnDriver");
-				Class.forName(driver);
-				conLms = DriverManager.getConnection(url, user, password);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
+	public Connection getConnection() throws ClassNotFoundException, SQLException {
+		if (con == null) {
+			String driver = "oracle.jdbc.OracleDriver";
+			String url = "jdbc:oracle:thin:@localhost:1521:XE";
+			String username = "dihar";
+			String password = "@dihar";
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, username, password);
+			return con;
+		} else {
+			return con;
 		}
-		return conLms;
-	}
-
-	public Connection getDBConnectionDge() {
-		try {
-			if (conDge == null) {
-				String url = ConfigManager.getProperty("DBConURL")+"/"+ConfigManager.getProperty("DBDGE");
-				String user = ConfigManager.getProperty("DBConnUser");
-				String password = ConfigManager.getProperty("DBConnPwd");
-				String driver = ConfigManager.getProperty("DBConnDriver");
-				Class.forName(driver);
-				conDge = DriverManager.getConnection(url, user, password);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return conDge;
-	}
-
-	public Connection getDBConnectionIge() {
-		try {
-			if (conIge == null) {
-				String url = ConfigManager.getProperty("DBConURL")+"/"+ConfigManager.getProperty("DBIGE");
-				String user = ConfigManager.getProperty("DBConnUser");
-				String password = ConfigManager.getProperty("DBConnPwd");
-				String driver = ConfigManager.getProperty("DBConnDriver");
-				Class.forName(driver);
-				conIge = DriverManager.getConnection(url, user, password);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return conIge;
-	}
-
-	public Connection getDBConnectionSle() {
-		try {
-			if (conSle == null) {
-				String url = ConfigManager.getProperty("DBConURL")+"/"+ConfigManager.getProperty("DBSLE");
-				String user = ConfigManager.getProperty("DBConnUser");
-				String password = ConfigManager.getProperty("DBConnPwd");
-				String driver = ConfigManager.getProperty("DBConnDriver");
-				Class.forName(driver);
-				conSle = DriverManager.getConnection(url, user, password);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return conSle;
-	}
-
-	public Connection getDBConnectionOla() {
-		try {
-			if (conOla == null) {
-				String url = ConfigManager.getProperty("DBConOlaURL");
-				String user = ConfigManager.getProperty("DBConnUser");
-				String password = ConfigManager.getProperty("DBConnPwd");
-				String driver = ConfigManager.getProperty("DBConnDriver");
-				Class.forName(driver);
-				conOla = DriverManager.getConnection(url, user, password);
-			}
-		} catch (Exception e) {
-			System.out.println(e);// e.printStackTrace();
-		}
-		return conOla;
-	}
-
-	public Connection getDBConnectionPms() {
-		try {
-			if (conDge == null) {
-				String url = ConfigManager.getProperty("DBConURL")+"/"+ConfigManager.getProperty("SIT_PMS");
-				String user = ConfigManager.getProperty("DBConnUser");
-				String password = ConfigManager.getProperty("DBConnPwd");
-				String driver = ConfigManager.getProperty("DBConnDriver");
-				Class.forName(driver);
-				conDge = DriverManager.getConnection(url, user, password);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return conDge;
 	}
 
 	public void closeConnection(Connection con) {
@@ -137,71 +65,192 @@ public class DBConnection {
 		}
 	}
 
-	public String getFinalQuery(String value) {
-
-		String tempQuery = value;
-
-		tempQuery = tempQuery.contains("DBLMS") ? tempQuery.replace("DBLMS", ConfigManager.getProperty("DBLMS"))
-				: tempQuery;
-
-		tempQuery = tempQuery.contains("dbDGE") ? tempQuery.replace("dbDGE", ConfigManager.getProperty("dbDGE"))
-				: tempQuery;
-
-		/*
-		 * //changed performed by Amit tempQuery2 = tempQuery1.contains("dbSLE")
-		 * ? tempQuery1.replace( "dbSLE", QueryFromProperty("dbSLE")) :
-		 * tempQuery1; // tempQuery3 = tempQuery2.contains("dbPMS")
-		 * ?tempQuery2.replace( "dbPMS", QueryFromProperty("dbPMS")) :
-		 * tempQuery2; // finalQuery = tempQuery3.contains("dbIPE") ?
-		 * tempQuery3.replace( "dbIPE", QueryFromProperty("dbIPE")) :
-		 * tempQuery3;
-		 * 
-		 * System.out.println("Final Query :- " + finalQuery);
-		 * SeleniumDriver.log.info("Final Query :- " + finalQuery); return
-		 * finalQuery;
-		 */
-		return tempQuery;
-
-	}
-
 	/**
 	 * @author Amit Kumar
 	 */
-	public ResultSet executeQuery(Connection connection,String Query,Object... args) throws SQLException {
+	public ResultSet executeQuery(Connection connection, String Query, Object... args) throws SQLException {
 		PreparedStatement ps = connection.prepareStatement(Query);
-		int i=1;
-		 for(Object arg:args) {
-			 logger.info("Arg Class : "+arg.getClass());
-			 if(arg.getClass().toString().trim().equals("class java.lang.String"))
-			  ps.setString(i++, arg.toString());
-			 else if(arg.getClass().toString().trim().equals("class java.lang.Integer"))
-				  ps.setInt(i++, (int) arg);
-			 else if(arg.getClass().toString().trim().equals("class java.lang.Float"))
-				  ps.setFloat(i++, (float) arg);
-			 else if(arg.getClass().toString().trim().equals("class java.lang.Double"))
-				  ps.setDouble(i++, (double) arg);
-		   }
+		int i = 1;
+		for (Object arg : args) {
+			logger.info("Arg Class : " + arg.getClass());
+			if (arg.getClass().toString().trim().equals("class java.lang.String"))
+				ps.setString(i++, arg.toString());
+			else if (arg.getClass().toString().trim().equals("class java.lang.Integer"))
+				ps.setInt(i++, (int) arg);
+			else if (arg.getClass().toString().trim().equals("class java.lang.Float"))
+				ps.setFloat(i++, (float) arg);
+			else if (arg.getClass().toString().trim().equals("class java.lang.Double"))
+				ps.setDouble(i++, (double) arg);
+		}
 		ResultSet rs = ps.executeQuery();
 		return rs;
 	}
-	
+
 	/**
 	 * @author Amit Kumar
 	 */
-	public int executeUpdate(Connection connection, String Query,Object... args) throws SQLException {
+	public int executeUpdate(Connection connection, String Query, Object... args) throws SQLException {
 		PreparedStatement ps = connection.prepareStatement(Query);
-		int i=1;
-		 for(Object arg:args) {
-			 logger.info("Arg Class : "+arg.getClass());
-			 if(arg.getClass().toString().trim().equals("class java.lang.String"))
-			  ps.setString(i++, arg.toString());
-			 else if(arg.getClass().toString().trim().equals("class java.lang.Integer"))
-				  ps.setInt(i++, (int) arg);
-			 else if(arg.getClass().toString().trim().equals("class java.lang.Float"))
-				  ps.setFloat(i++, (float) arg);
-			 else if(arg.getClass().toString().trim().equals("class java.lang.Double"))
-				  ps.setDouble(i++, (double) arg);
-		   }
+		int i = 1;
+		for (Object arg : args) {
+			logger.info("Arg Class : " + arg.getClass());
+			if (arg.getClass().toString().trim().equals("class java.lang.String"))
+				ps.setString(i++, arg.toString());
+			else if (arg.getClass().toString().trim().equals("class java.lang.Integer"))
+				ps.setInt(i++, (int) arg);
+			else if (arg.getClass().toString().trim().equals("class java.lang.Float"))
+				ps.setFloat(i++, (float) arg);
+			else if (arg.getClass().toString().trim().equals("class java.lang.Double"))
+				ps.setDouble(i++, (double) arg);
+		}
 		return ps.executeUpdate();
 	}
+
+	public static void main(String args[]) {
+
+		 //new DbConnection().createDatabase();
+		//new DbConnection().insertPdfInDatabase();
+		new DbConnection().readPdfInDatabase();
+	}
+
+	public void dropAllTable() {
+		Connection conn = null;
+		Statement stmt = null;
+		try {
+			conn = getConnection();
+			stmt = conn.createStatement();
+			// stmt.executeUpdate(BOOK_RETURN_MASTER);
+			stmt.executeUpdate("drop table LOGIN_MASTER");
+
+			JOptionPane.showMessageDialog(null, "DELETED");
+			// System.out.println("LIBRARY MANAGEMENT SYSTEM DATABASE CREATED
+			// WITH ALL TABLE .. !!");
+
+		} catch (ClassNotFoundException e) {
+			System.out.println("error: failed to load Oracle driver.");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("error: failed to create a connection object.");
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("other error:");
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				conn.close();
+			} catch (Exception e) {
+			}
+		}
+
+	}
+
+	public boolean createDatabase() {
+		Connection conn = null;
+		Statement stmt = null;
+		try {
+			conn = getConnection();
+			stmt = conn.createStatement();
+
+			stmt.executeUpdate(DbQuery.DdlQuery.NOTIFICATION_MASTER3);
+			System.out.println("Table Created");
+			/*
+			 * stmt.executeUpdate(DbQuery.DdlQuery.LOGIN_MASTER);
+			 * 
+			 * stmt.
+			 * executeUpdate("insert into login_master values('dihar', '123','common')"
+			 * );
+			 */
+			// System.out.println("LIBRARY MANAGEMENT SYSTEM DATABASE CREATED
+			// WITH ALL TABLE .. !!");
+			return true;
+
+		} catch (ClassNotFoundException e) {
+			System.out.println("error: failed to load Oracle driver.");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("error: failed to create a connection object.");
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("other error:");
+			e.printStackTrace();
+		} finally {
+			try {
+				stmt.close();
+				// conn.close();
+			} catch (Exception e) {
+			}
+		}
+		return false;
+	}
+
+	public boolean insertPdfInDatabase() {
+		try {
+
+			JFileChooser jfc = new JFileChooser();
+			String[] suffices = ImageIO.getReaderFileSuffixes();
+			for (int i = 0; i < suffices.length; i++) {
+				FileFilter filter = new FileNameExtensionFilter(suffices[i] + " files", suffices[i]);
+				jfc.addChoosableFileFilter(filter);
+			}
+			jfc.showDialog(null, "open file");
+			File f = jfc.getSelectedFile();
+			String path = f.getAbsolutePath();
+
+			// Class.forName("oracle.jdbc.OracleDriver");
+			// Connection con =
+			// DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE",
+			// "system", "@amit");
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement(
+					"insert into notification_master values('1', 'First Heading','common',?,'pdf',?,'TY-400')");
+
+			FileInputStream fin1 = new FileInputStream(path);
+			ps.setBinaryStream(1, fin1, (int) f.length());
+			ps.setDate(2, new Date(1000));
+			int k = ps.executeUpdate();
+			if (k > 0) {
+				JOptionPane.showMessageDialog(null, "PDF UPDATED !!");
+				return true;
+
+			} else {
+				JOptionPane.showMessageDialog(null, "ERROR OCCUR  !!");
+			}
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		return false;
+
+	}
+
+	public boolean readPdfInDatabase() {
+		try {
+
+			Connection con = getConnection();
+			PreparedStatement ps = con.prepareStatement("select * from notification_master where noti_id='2'");
+
+			ResultSet rs2 = ps.executeQuery();
+			while (rs2.next()) {
+				
+				Blob blob = rs2.getBlob(4);
+				InputStream is = blob.getBinaryStream();
+
+				FileOutputStream fos = new FileOutputStream("D:\\DownloadCreditCardsucess.pdf");
+				int b = 0;
+				while ((b = is.read()) != -1) {
+					fos.write(b);
+				}
+				JOptionPane.showMessageDialog(null, "PDF UPDATED !!");
+				return true;
+
+			}
+		} catch (
+
+		Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		return false;
+
+	}
+
 }
