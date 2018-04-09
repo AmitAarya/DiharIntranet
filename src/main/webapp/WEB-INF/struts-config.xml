@@ -65,12 +65,12 @@
 			type="com.dihar.common.fileupload.action.FileUploadAction" scope="request"
 			input="/upload.jsp">
 			<forward name="failure" path="/error.jsp" redirect="true" />
-			<forward name="success" path="/download.jsp" redirect="true" />
+			<forward name="success" path="/sucess.jsp" redirect="true" />
 		</action>
 		
 		<action name="NotificationDownloadForm" path="/notificationdownload"
 			type="com.dihar.common.fileupload.action.NotificationDownloadAction" scope="request"
-			input="/download.jsp">
+			input="/diharhome.jsp">
 			<forward name="failure" path="/error.jsp" redirect="true" />
 			<forward name="success" path="/*" redirect="true" />
 		</action>

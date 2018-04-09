@@ -9,7 +9,7 @@ import com.dihar.utils.ReusableStaticMethods;
 import oracle.jdbc.OraclePreparedStatement;
 
 public class FileUploadDao {
-	public boolean isFileInsertedInDatabase(String heading, String type,FormFile f) {
+	public boolean isFileInsertedInDatabase(String heading, String type,String fileName,FormFile f) {
 		try {
 			byte[] fileData  = f.getFileData();	
 			String noti_id=String.valueOf(ReusableStaticMethods.getNotificationId());
@@ -19,14 +19,15 @@ public class FileUploadDao {
 			
 			Connection con =DbConnection.getInstance().getConnection();
 			OraclePreparedStatement ps = (OraclePreparedStatement)con.prepareStatement(
-					"insert into notification_master values(?,?,?,?,?,?,'TY-400')");			
+					"insert into notification_master values(?,?,?,?,?,?,?,'TY-400')");			
 			
 			ps.setString(1, noti_id);
 			ps.setString(2, heading);
 			ps.setString(3, type);
-			ps.setBytesForBlob(4, fileData);
-			ps.setString(5, extention);			
-			ps.setTimestamp(6, DateUtils.getCurrentDateFromDb());
+			ps.setString(4, fileName);
+			ps.setBytesForBlob(5, fileData);
+			ps.setString(6, extention);			
+			ps.setTimestamp(7, DateUtils.getCurrentDateFromDb());
 			//ps.setDate(2, new Date(500));
 			
 			int k = ps.executeUpdate();

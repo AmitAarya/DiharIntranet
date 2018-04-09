@@ -28,6 +28,7 @@ public class FileUploadAction extends Action {
 		//FormFile noti_file = fileuploadform.getNoti_file();
 		
 		 FormFile myFile = fileuploadform.getNoti_file();
+		 String fileName  = myFile.getFileName();
 		 
 		/* String contentType = myFile.getContentType();
 		  String fileName  = myFile.getFileName();
@@ -40,7 +41,7 @@ public class FileUploadAction extends Action {
 		  */
 		 // return mapping.findForward("success");
 	        
-		if (!new FileUploadDao().isFileInsertedInDatabase(noti_heading, noti_type, myFile)) {
+		if (!new FileUploadDao().isFileInsertedInDatabase(noti_heading, noti_type,fileName, myFile)) {
 			return mapping.findForward("failure");
 		} else
 			return mapping.findForward("success");

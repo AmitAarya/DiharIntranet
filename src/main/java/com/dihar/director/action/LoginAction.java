@@ -18,8 +18,8 @@ public class LoginAction extends Action {
 		DirectorLoginForm loginForm = (DirectorLoginForm) form;
 
 		if (loginForm.getUserName() == null || loginForm.getPassword() == null
-				|| !loginForm.getUserName().equalsIgnoreCase("Dihar")
-				|| !loginForm.getPassword().equals("123")) {
+				|| !loginForm.getUserName().equalsIgnoreCase("dsa")
+				|| !loginForm.getPassword().equals("@dsa")) {
 			return mapping.findForward("failure");
 		} else
 			return mapping.findForward("success");

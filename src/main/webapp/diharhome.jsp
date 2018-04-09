@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
+<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
@@ -17,7 +18,8 @@
 	xmlns:sioct="http://rdfs.org/sioc/types#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	class="js bootstrap-anchors-processed" content="text/html; charset=UTF-8">
+	class="js bootstrap-anchors-processed"
+	content="text/html; charset=UTF-8">
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -214,13 +216,6 @@
 						<ul id="header-nav">
 
 
-
-
-
-
-
-
-
 							<li><a onclick="set_font_size(&#39;increase&#39;)"
 								title="Increase font size" href="javascript:void(0);">A<sup>+</sup></a>
 							</li>
@@ -235,12 +230,7 @@
 								class="high-contrast light" title="Normal Contrast"
 								style="display: none;">A</a></li>
 
-
-
-
-
-
-						</ul>
+					</ul>
 					</div>
 				</div>
 			</div>
@@ -323,7 +313,7 @@
 				<div id="main-menu">
 					<ul class="menu nav">
 						<li class="first leaf active"><a
-							href="http://192.168.0.79:8085/DiharIntranet/DiharHome.html"
+							href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp"
 							title="" class="active"><i class="fa fa-home">HOME</i></a></li>
 						<li class="expanded dropdown active"><a
 							href="http://www.upsc.gov.in/" title="" data-target="#"
@@ -554,10 +544,14 @@
 
 
 		<h2 class="whats-heading">
-			<font color="red">What’s New </font></h2>
-			
-			<h4><font color="green"> --ID--|------------HEADING-----------|------TYPE------|-----ADDED BY----</font></h4>
-		
+			<font color="red">What’s New </font>
+		</h2>
+
+		<h5>
+			<font color="#cc9900">
+				<b>|------------------------HEADING------------------------|--------TYPE--------|---------DOWNLOAD--------|</b></font>
+		</h5>
+
 
 
 
@@ -591,64 +585,73 @@
 								href="http://192.168.0.79:8085/DiharIntranet/notification/TaDaClaimLimit.pdf">Time
 									Limit For Submission Of Claim For TA </a></li>
 							<!--li><a href="sites/default/files/wr_ifsp_2017.pdf">Result: Indian Forest Service (Prelim.) Examination 2017 through CS(P) Examination 2017</a></li-->
-						</ul>
-					</div> -->
+					</ul>
+				</div>
+				-->
 
 
-					<div class="view-content">
+				<div class="view-content">
 
-						<sql:setDataSource var="dihardb" driver="oracle.jdbc.OracleDriver"
-							url="jdbc:oracle:thin:@localhost:1521:XE" user="dihar"
-							password="@dihar" />
+					<sql:setDataSource var="dihardb" driver="oracle.jdbc.OracleDriver"
+						url="jdbc:oracle:thin:@localhost:1521:XE" user="dihar"
+						password="@dihar" />
 
-						<sql:query dataSource="${dihardb}" var="notificationdata">
-        select noti_id, noti_heading, noti_type, noti_added_by from notification_master order by noti_id desc
+					<sql:query dataSource="${dihardb}" var="notificationdata">
+        select noti_id, noti_heading, noti_type from notification_master order by noti_id desc
     </sql:query>
 
-						<div align="center">
-							<table border="1" cellpadding="5">
+					<div align="center">
+						<table border="1" cellpadding="5">
 
+							<!--  <tr>
+								<th>ID</th>
+								<th>HEADING</th>
+								<th>TYPE</th>
+								<th>DOWNLOAD</th>
+							</tr> -->
+							<c:forEach var="notificationdata"
+								items="${notificationdata.rows}">
 								<tr>
-									<th>ID</th>
-									<th>HEADING</th>
-									<th>TYPE</th>
-									<th>ADDED BY</th>
-								</tr>
-								<c:forEach var="notificationdata"
-									items="${notificationdata.rows}">
-									<tr>
-										<td><c:out value="${notificationdata.noti_id}" /></td>
+									<html:form action="/notificationdownload" focus="noti_id">
+
+										<!-- <td><c:out value="${notificationdata.noti_id}" /></td> -->
+										<td><input type="hidden" name="noti_id" value="${notificationdata.noti_id}" height="1" width="1"></td>
+
 										<td><c:out value="${notificationdata.noti_heading}" /></td>
 										<td><c:out value="${notificationdata.noti_type}" /></td>
 										<td><c:out value="${notificationdata.noti_added_by}" /></td>
-									</tr>
-								</c:forEach>
-							</table>
-						</div>
-
-
-
-
-
-
-
-
+										<td>
+											<button type="submit" class="login__submit"
+												value="notificationdownload"><font color="red">DOWNLOAD</font></button>
+										</td>
+									</html:form>
+								</tr>
+							</c:forEach>
+						</table>
 					</div>
+
+
+
+
+
+
+
+
 				</div>
-				<!-- END OUTPUT from 'sites/all/modules/contributed/views/theme/views-view.tpl.php' -->
-
-
-			</marquee>
-
-
-			<div class="more-link">
-				<a
-					href="http://192.168.0.79:8085/DiharIntranet/What'sNew_DIHAR.html">View
-					all » </a>
-			</div>
-
-
 		</div>
+		<!-- END OUTPUT from 'sites/all/modules/contributed/views/theme/views-view.tpl.php' -->
+
+
+		</marquee>
+
+
+		<div class="more-link">
+			<a href="http://192.168.0.79:8085/DiharIntranet/What's_New.jsp">View
+				all » </a>
+		</div>
+
+
+	</div>
 
 
 
@@ -709,7 +712,7 @@
 									target="_blank">Time Limit For Submission Of Claim For TA</a>
 							</marquee>
 							<a class="btn btn-success btn-xs alert-btn"
-								href="http://192.168.0.79:8085/DiharIntranet/What'sNew_DIHAR.html">View
+								href="http://192.168.0.79:8085/DiharIntranet/What's_New.jsp">View
 								all</a>
 						</p>
 

@@ -108,9 +108,9 @@ public class DbConnection {
 
 	public static void main(String args[]) {
 
-		 //new DbConnection().createDatabase();
+		 new DbConnection().createDatabase();
 		//new DbConnection().insertPdfInDatabase();
-		new DbConnection().readPdfInDatabase();
+		//new DbConnection().readPdfInDatabase();
 	}
 
 	public void dropAllTable() {
@@ -152,7 +152,7 @@ public class DbConnection {
 			conn = getConnection();
 			stmt = conn.createStatement();
 
-			stmt.executeUpdate(DbQuery.DdlQuery.NOTIFICATION_MASTER3);
+			stmt.executeUpdate(DbQuery.DdlQuery.NOTIFICATION_MASTER);
 			System.out.println("Table Created");
 			/*
 			 * stmt.executeUpdate(DbQuery.DdlQuery.LOGIN_MASTER);

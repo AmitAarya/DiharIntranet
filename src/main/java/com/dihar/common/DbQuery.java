@@ -31,14 +31,7 @@ public class DbQuery {
 		            + "   avatar_id VARCHAR(30) NOT NULL, avatar BLOB, avatar_sign BLOB , avatar_type VARCHAR(30)" + ")";
 
 		    public static final String NOTIFICATION_MASTER = "create table notification_master ( "
-		            + "   noti_id VARCHAR(30) PRIMARY KEY, noti_heading VARCHAR(2000) NOT NULL, noti_type VARCHAR(30), noti_file BLOB NOT NULL, noti_file_extension VARCHAR(30) NOT NULL, noti_adding_date DATE NOT NULL, noti_added_by VARCHAR(30) " + ")";
-		    
-		    public static final String NOTIFICATION_MASTER2 = "create table notification_master_2 ( "
-		            + "   noti_id VARCHAR(30) PRIMARY KEY, noti_heading VARCHAR(2000) NOT NULL, noti_type VARCHAR(30), noti_file CLOB NOT NULL, noti_file_extension VARCHAR(30) NOT NULL, noti_adding_date DATE NOT NULL, noti_added_by VARCHAR(30) " + ")";
-
-		    public static final String NOTIFICATION_MASTER3 = "create table notification_master_3 ( "
-		            + "   noti_id VARCHAR(30) PRIMARY KEY, noti_heading VARCHAR(2000) NOT NULL, noti_type VARCHAR(30), noti_file BFILE NOT NULL, noti_file_extension VARCHAR(30) NOT NULL, noti_adding_date DATE NOT NULL, noti_added_by VARCHAR(30) " + ")";
-
+		            + "   noti_id VARCHAR(30) PRIMARY KEY, noti_heading VARCHAR(2000) NOT NULL, noti_type VARCHAR(30) NOT NULL, noti_file_name VARCHAR(500) NOT NULL,noti_file BLOB NOT NULL, noti_file_extension VARCHAR(30) NOT NULL, noti_adding_date DATE NOT NULL, noti_added_by VARCHAR(30) NOT NULL" + ")";
 		   	}
 	
 	public static class DmlQuery{

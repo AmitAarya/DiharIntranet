@@ -11,6 +11,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dihar.common.fileupload.dao.FileDownloadDao;
 import com.dihar.common.fileupload.form.NotificationDownloadForm;
 
 public class NotificationDownloadAction extends Action {
@@ -18,16 +19,20 @@ public class NotificationDownloadAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		NotificationDownloadForm downloadform = (NotificationDownloadForm) form;
-		System.out.println(downloadform.getNoti_id());
-
-		response.setContentType("application/pdf");
+		
+		//System.out.println(downloadform.getNoti_id());		
+		String File_Details=new FileDownloadDao().readFileFromDatabase(downloadform.getNoti_id());
+		
+		
+		response.setContentType("application/octet-stream");
+		
 		PrintWriter out = response.getWriter();
-		String filename = "DownloadCreditCardsucess.pdf";
-		String filepath = "D:\\";
+		//String filename = File_Details.split("\\.")[0];
+		String filepath = "C:\\diharfilebuffer\\";
 		response.setContentType("APPLICATION/OCTET-STREAM");
-		response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");
+		response.setHeader("Content-Disposition", "attachment; filename=\"" + File_Details + "\"");
 
-		FileInputStream fileInputStream = new FileInputStream(filepath + filename);
+		FileInputStream fileInputStream = new FileInputStream(filepath + File_Details);
 
 		int i;
 		while ((i = fileInputStream.read()) != -1) {
