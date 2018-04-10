@@ -16,7 +16,7 @@
 
 </head>
 
-<body background="images/bg_new.JPG">
+<body background="images/backgroundnew.jpg">
             <p align="center"><font size="7" color="#ff3300">WELCOME TO DIHAR NETWORK</font></p>
 	<!-- <div class="cont"> -->
 		<div class="demo">

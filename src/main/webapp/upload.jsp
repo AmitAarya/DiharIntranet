@@ -15,6 +15,7 @@
 	<p align="center">
 		<font size="6" color="blue">WELCOME </font>
 	</p>
+	<a href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp"><font color="green"> </font><b>>>HOME</b></a>
 	<div class="demo">
 		<div class="login">
 
