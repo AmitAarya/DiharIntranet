@@ -2,13 +2,16 @@ package com.dihar.drtc.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dihar.drtc.dao.LoginDao;
 import com.dihar.drtc.form.DrtcLoginForm;
+import com.dihar.utils.ReusableStaticMethods;
 
 public class LoginAction extends Action {
 	@Override
@@ -17,12 +20,13 @@ public class LoginAction extends Action {
 			throws Exception {
 		DrtcLoginForm loginForm = (DrtcLoginForm) form;
 
-		if (loginForm.getUserName() == null || loginForm.getPassword() == null
-				|| !loginForm.getUserName().equalsIgnoreCase("Dihar")
-				|| !loginForm.getPassword().equals("123")) {
-			return mapping.findForward("failure");
-		} else
+		if ( new LoginDao().isVerifyLoginData(loginForm.getUserName(),loginForm.getPassword())) {
+			HttpSession session=request.getSession();
+			session.setAttribute("userId",loginForm.getUserName());
+			session.setAttribute("username",ReusableStaticMethods.getEmployeeName(loginForm.getUserName()));
 			return mapping.findForward("success");
+		} else
+			return mapping.findForward("failure");
 	}
 
 }

@@ -12,8 +12,25 @@
 		<form-bean name="DrtcLoginForm" type="com.dihar.drtc.form.DrtcLoginForm" />
 		<form-bean name="AdminLoginForm" type="com.dihar.admin.form.AdminLoginForm" />
 		<form-bean name="RootLoginForm" type="com.dihar.root.form.RootLoginForm" />
+		<form-bean name="StoreLoginForm" type="com.dihar.store.form.StoreLoginForm" />
+	
 		<form-bean name="FileUploadForm" type="com.dihar.common.fileupload.form.FileUploadForm" />
 		<form-bean name="NotificationDownloadForm" type="com.dihar.common.fileupload.form.NotificationDownloadForm" />
+		
+		<form-bean name="RegisterNewDsa" type="com.dihar.root.form.RegisterNewDsa" />
+		<form-bean name="RegisterNewDirector" type="com.dihar.root.form.RegisterNewDirector" />
+		<form-bean name="RegisterNewDrds" type="com.dihar.root.form.RegisterNewDrds" />
+		<form-bean name="RegisterNewDrtc" type="com.dihar.root.form.RegisterNewDrtc" />
+		<form-bean name="RegisterNewAdmin" type="com.dihar.root.form.RegisterNewAdmin" />
+		<form-bean name="RegisterNewStore" type="com.dihar.root.form.RegisterNewStore" />	
+		<form-bean name="RegisterNewEmployeeForm" type="com.dihar.root.form.RegisterNewEmployeeForm" />
+		<form-bean name="TxnForm" type="com.dihar.common.txn.form.TxnForm" />
+        <form-bean name="TxnFileDownloadForm" type="com.dihar.common.txn.form.TxnFileDownloadForm" />
+			
+		<form-bean name="TxnFileUploadForm" type="com.dihar.common.txn.form.TxnFileUploadForm" />	
+		
+		
+			
 			
 	</form-beans>
 	<action-mappings>
@@ -27,32 +44,32 @@
 		<action name="DsaLoginForm" path="/dsalogin"
 			type="com.dihar.dsa.action.LoginAction" scope="request" input="/dsalogin.jsp">
 			<forward name="failure" path="/dsalogin.jsp" redirect="true" />
-			<forward name="success" path="/FileUpload.html" redirect="true" />
+			<forward name="success" path="/DsaWelcome.jsp" redirect="true" />
 		</action>
 
 		<action name="directorLoginForm" path="/directorlogin"
 			type="com.dihar.director.action.LoginAction" scope="request"
 			input="/directorlogin.jsp">
 			<forward name="failure" path="/directorlogin.jsp" redirect="true" />
-			<forward name="success" path="/upload.jsp" redirect="true" />
+			<forward name="success" path="/DirectorWelcome.jsp" redirect="true" />
 		</action>
 
 		<action name="DrdsLoginForm" path="/drdslogin"
 			type="com.dihar.drds.action.LoginAction" scope="request" input="/drdslogin.jsp">
 			<forward name="failure" path="/drdslogin.jsp" redirect="true" />
-			<forward name="success" path="/FileUpload.html" redirect="true" />
+			<forward name="success" path="/DrdsWelcome.jsp" redirect="true" />
 		</action>
 
 		<action name="DrtcLoginForm" path="/drtclogin"
-			type="com.dihar.drtc.action.LoginAction" scope="request" input="/directorlogin.jsp">
+			type="com.dihar.drtc.action.LoginAction" scope="request" input="/drtclogin.jsp">
 			<forward name="failure" path="/drtclogin.jsp" redirect="true" />
-			<forward name="success" path="/FileUpload.html" redirect="true" />
+			<forward name="success" path="/DrtcWelcome.jsp" redirect="true" />
 		</action>
 
 		<action name="AdminLoginForm" path="/adminlogin"
 			type="com.dihar.admin.action.LoginAction" scope="request" input="/adminlogin.jsp">
 			<forward name="failure" path="/adminlogin.jsp" redirect="true" />
-			<forward name="success" path="/FileUpload.html" redirect="true" />
+			<forward name="success" path="/AdminWelcome.jsp" redirect="true" />
 		</action>
 
 		<action name="RootLoginForm" path="/rootlogin"
@@ -60,6 +77,16 @@
 			<forward name="failure" path="/rootlogin.jsp" redirect="true" />
 			<forward name="success" path="/roothome.html" redirect="true" />
 		</action>
+
+        <action name="StoreLoginForm" path="/storelogin"
+			type="com.dihar.store.action.LoginAction" scope="request" input="/storelogin.jsp">
+			<forward name="failure" path="/storelogin.jsp" redirect="true" />
+			<forward name="success" path="/upload.jsp" redirect="true" />
+		</action>
+
+
+
+
 
 		<action name="FileUploadForm" path="/fileupload"
 			type="com.dihar.common.fileupload.action.FileUploadAction" scope="request"
@@ -75,6 +102,87 @@
 			<forward name="success" path="/*" redirect="true" />
 		</action>
 
+
+
+
+
+        <action name="RegisterNewDsa" path="/registerdsa"
+			type="com.dihar.root.action.RegisterNewDsaAction" scope="request"
+			input="/RegisterNewDsa.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+		
+		 <action name="RegisterNewDirector" path="/registerdirector"
+			type="com.dihar.root.action.RegisterNewDirectorAction" scope="request"
+			input="/RegisterNewDirector.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+		
+		 <action name="RegisterNewDrds" path="/registerdrds"
+			type="com.dihar.root.action.RegisterNewDrdsAction" scope="request"
+			input="/RegisterNewDrds.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+		
+		 <action name="RegisterNewDrtc" path="/registerdrtc"
+			type="com.dihar.root.action.RegisterNewDrtcAction" scope="request"
+			input="/RegisterNewDrtc.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+		
+		 <action name="RegisterNewAdmin" path="/registeradmin"
+			type="com.dihar.root.action.RegisterNewAdminAction" scope="request"
+			input="/RegisterNewAdmin.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+		 <action name="RegisterNewStore" path="/registerstore"
+			type="com.dihar.root.action.RegisterNewStoreAction" scope="request"
+			input="/RegisterNewStore.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+		<action name="RegisterNewEmployeeForm" path="/registeremployee"
+			type="com.dihar.root.action.RegisterNewEmployeeAction" scope="request"
+			input="/RegisterNewEmployee.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+		
+		
+		
+		
+		<action name="TxnForm" path="/applyforleave"
+			type="com.dihar.common.txn.action.TxnAction" scope="request"
+			input="/ApplyForLeave.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/UserRegistrationSucess.jsp" redirect="true" />
+		</action>
+		
+         <action name="TxnFileDownloadForm" path="/txnfiledownload"
+			type="com.dihar.common.txn.action.TxnFileDownloadAction" scope="request"
+			input="/DsaWelcome.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/*" redirect="true" />
+		</action>
+
+        <action name="TxnFileUploadForm" path="/txnfilereturn"
+			type="com.dihar.common.txn.action.TxnFileUploadAction" scope="request"
+			input="/DsaWelcome.jsp">
+			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
+			<forward name="success" path="/*" redirect="true" />
+		</action>
 
 	</action-mappings>
 </struts-config>

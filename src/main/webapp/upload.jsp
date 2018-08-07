@@ -1,9 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
 <meta charset="ISO-8859-1">
@@ -13,7 +12,25 @@
 </head>
 <body background="images/backgroung2.jpg">
 	<p align="center">
-		<font size="6" color="blue">WELCOME </font>
+		<font size="6" color="blue">WELCOME  
+		<jsp:useBean id="st" class="com.dihar.drtc.form.DrtcLoginForm"> </font>
+
+
+<%--
+Put the values entered into the form into the bean class
+--%>
+
+<jsp:setProperty name="st" property="*"/>
+
+
+<%--
+Get all the values that are put in the object 'st' with the
+given property names
+--%>
+
+<jsp:getProperty property="userName" name="st"/>
+
+</jsp:useBean>
 	</p>
 	<a href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp"><font color="green"> </font><b>>>HOME</b></a>
 	<div class="demo">
@@ -31,7 +48,8 @@
 				</div>
 							
 				<h4>HEADING :</h4> <html:text property="noti_heading" /> 
-				<h4>TYPE :</h4> <html:select property="noti_type">
+				<h4>TYPE :</h4>
+				 <html:select property="noti_type">
 				<option value="common">COMMON</option>
 				<option value="admin">ADMIN</option>
 				<option value="drds">DRDS</option>
@@ -55,7 +73,7 @@
 	
 	        
 	   <h2 class="whats-heading">
-				<font color="red">What’s New     </font> </h2>
+				<font color="red">Whatâs New     </font> </h2>
      
 	
 	 
@@ -146,7 +164,7 @@
       
 	   <div class="more-link">
 					<a
-						href="http://192.168.0.79:8085/DiharIntranet/What's_New.jsp">View all » </a>
+						href="http://192.168.0.79:8085/DiharIntranet/What's_New.jsp">View all Â» </a>
       </div>	
 	
 

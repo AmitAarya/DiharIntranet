@@ -17,12 +17,13 @@
 </head>
 
 <body background="images/backgroung2.jpg">
+<a href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp"><font color="green"> </font><b>>>HOME</b></a>
 	<!-- <div class="cont"> -->
 		<div class="demo">
 			<div class="login">
 			<div class="login__check"></div>
 				<div class="login__form">
-					<html:form action="/directorlogin" focus="userName">
+					<html:form action="/dsalogin" focus="userName">
 						<!-- <form action="/login" focus="login__input name"> -->
 						<div class="login__row">
 							<svg class="login__icon name svg-icon" viewBox="0 0 20 20">

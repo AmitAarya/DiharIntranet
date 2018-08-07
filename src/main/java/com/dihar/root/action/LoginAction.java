@@ -9,6 +9,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.dihar.root.dao.LoginDao;
 import com.dihar.root.form.RootLoginForm;
 
 
@@ -19,12 +20,10 @@ public class LoginAction extends Action {
 			throws Exception {
 		RootLoginForm loginForm = (RootLoginForm) form;
 
-		if (loginForm.getUserName() == null || loginForm.getPassword() == null
-				|| !loginForm.getUserName().equalsIgnoreCase("root")
-				|| !loginForm.getPassword().equals("root")) {
-			return mapping.findForward("failure");
-		} else
+		if ( new LoginDao().isVerifyLoginData(loginForm.getUserName(),loginForm.getPassword())) {
 			return mapping.findForward("success");
+		} else
+			return mapping.findForward("failure");
 	}
 
 }

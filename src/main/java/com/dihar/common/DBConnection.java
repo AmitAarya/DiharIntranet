@@ -12,6 +12,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
@@ -102,6 +103,8 @@ public class DbConnection {
 				ps.setFloat(i++, (float) arg);
 			else if (arg.getClass().toString().trim().equals("class java.lang.Double"))
 				ps.setDouble(i++, (double) arg);
+			else if (arg.getClass().toString().trim().equals("class java.sql.Timestamp"))
+				ps.setTimestamp(i++,  (Timestamp) arg);
 		}
 		return ps.executeUpdate();
 	}
@@ -151,9 +154,29 @@ public class DbConnection {
 		try {
 			conn = getConnection();
 			stmt = conn.createStatement();
-
-			stmt.executeUpdate(DbQuery.DdlQuery.NOTIFICATION_MASTER);
-			System.out.println("Table Created");
+			stmt.executeUpdate(DbQuery.DdlQuery.TXN_RETURN_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.TXN_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.ROOT_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.DIRECTOR_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.ADMIN_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.DSA_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.DRDS_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.DRTC_MASTER);
+			//stmt.executeUpdate(DbQuery.DdlQuery.AVATAR_MASTER);
+			
+			
+			 // stmt.executeUpdate(DbQuery.DdlQuery.NOTIFICATION_MASTER);
+			/*  stmt.executeUpdate("insert into login_master values('dihar', '@dihar','common','ACTIVE')");
+			  stmt.executeUpdate("insert into login_master values('director', '@director','director','ACTIVE')");
+			  stmt.executeUpdate("insert into login_master values('admin', '@admin','admin','ACTIVE')");
+			  stmt.executeUpdate("insert into login_master values('dsa', '@dsa','dsa','ACTIVE')");
+			  stmt.executeUpdate("insert into login_master values('drds', '@drds','drds','ACTIVE')");
+			  stmt.executeUpdate("insert into login_master values('drtc', '@drtc','drtc','ACTIVE')");
+			  stmt.executeUpdate("insert into login_master values('root', '@root','root','ACTIVE')");
+			*/
+			
+			
+			System.out.println("Table created...");
 			/*
 			 * stmt.executeUpdate(DbQuery.DdlQuery.LOGIN_MASTER);
 			 * 
@@ -169,6 +192,7 @@ public class DbConnection {
 			System.out.println("error: failed to load Oracle driver.");
 			e.printStackTrace();
 		} catch (SQLException e) {
+			e.printStackTrace();
 			System.out.println("error: failed to create a connection object.");
 			e.printStackTrace();
 		} catch (Exception e) {

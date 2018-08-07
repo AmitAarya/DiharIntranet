@@ -17,6 +17,7 @@
 </head>
 
 <body background="images/backgroung2.jpg">
+<a href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp"><font color="green"> </font><b>>>HOME</b></a>
 	<!-- <div class="cont"> -->
 		<div class="demo">
 			<div class="login">

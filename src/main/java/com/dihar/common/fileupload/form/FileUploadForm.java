@@ -1,11 +1,10 @@
 package com.dihar.common.fileupload.form;
 
 import javax.servlet.http.HttpServletRequest;
+
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
-
-import java.io.File;
 
 public class FileUploadForm extends ActionForm {
 	private static final long serialVersionUID = 1L;

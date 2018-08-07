@@ -19,10 +19,12 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	class="js bootstrap-anchors-processed"
 	content="text/html; charset=UTF-8">
+	
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="Generator" content="Drupal 7 (http://drupal.org)">
+
 <title>Welcome to DIHAR</title>
 <link type="text/css" rel="stylesheet"
 	href="./Welcome to UPSC _ UPSC_files/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css"
@@ -110,6 +112,9 @@
 	src="./Welcome to UPSC _ UPSC_files/js_iiro2olv-RX3gC3Gs2RbWAN3fitln8gMi7wDaiQWkFg.js.download"></script>
 <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"upsc","theme_token":"Ujyy6y1SRLW1zdtbnxX5j8cnRMECQ1c8ycnfbIrylwA","jquery_version":"1.10","js":{"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/libraries\/respondjs\/respond.min.js":1,"sites\/all\/modules\/contributed\/jquery_update\/replace\/jquery\/1.10\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contributed\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contributed\/jquery_update\/replace\/misc\/jquery.form.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contributed\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/themes\/bootstrap\/js\/misc\/_progress.js":1,"0":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/js\/font-size.js":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/js\/framework.js":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/js\/swithcer.js":1,"sites\/all\/modules\/cmf\/goisearch\/js\/custom_result_jsversion.js":1,"sites\/all\/modules\/cmf\/goisearch\/js\/auto_jsversion.js":1,"1":1,"sites\/all\/modules\/contributed\/views_bootstrap\/js\/views-bootstrap-carousel.js":1,"sites\/all\/modules\/contributed\/views\/js\/base.js":1,"sites\/all\/modules\/contributed\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/contributed\/quicktabs\/js\/quicktabs.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/affix.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/alert.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/button.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/carousel.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/collapse.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/dropdown.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/modal.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/tooltip.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/popover.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/scrollspy.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/tab.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/transition.js":1,"sites\/all\/themes\/upsc\/js\/custom.js":1,"sites\/all\/themes\/upsc\/js\/jquery_1.12.4.js":1,"sites\/all\/themes\/bootstrap\/js\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/themes\/bootstrap\/js\/misc\/ajax.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/contributed\/date\/date_api\/date.css":1,"sites\/all\/modules\/contributed\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contributed\/views\/css\/views.css":1,"sites\/all\/modules\/contributed\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/base.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/font.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/flexslider.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/base-responsive.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/font-awesome.min.css":1,"sites\/all\/modules\/contributed\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/cmf\/goisearch\/css\/custom_result.css":1,"http:\/\/goisas.nic.in\/content\/scripts\/jquery.1.8.7\/themes\/base\/jquery.ui.all.css":1,"sites\/all\/modules\/cmf\/goisearch\/css\/add-css.css":1,"sites\/all\/modules\/contributed\/panels\/css\/panels.css":1,"sites\/all\/modules\/contributed\/quicktabs\/css\/quicktabs.css":1,"sites\/all\/themes\/upsc\/css\/style.css":1}},"encrypt_submissions":{"baseUrl":"http:\/\/www.upsc.gov.in"},"urlIsAjaxTrusted":{"\/":true,"\/quicktabs\/ajax\/related_links\/0\/view\/related_links\/block\/1\/node\/":true},"viewsBootstrap":{"carousel":{"1":{"id":1,"name":"main_slider","attributes":{"interval":5000,"pause":false}}}},"ajax":{"quicktabs-tab-related_links-0":{"progress":{"message":"","type":"throbber"},"event":"click","url":"\/quicktabs\/ajax\/related_links\/0\/view\/related_links\/block\/1\/node\/"}},"quicktabs":{"qt_related_links":{"name":"related_links","tabs":[{"vid":"related_links","display":"block","args":"","view_path":"node","view_dom_id":1,"ajax_args":"","actual_args":[]}],"ajaxPageState":{"jquery_version":"1.10"}}},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":0,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
 </head>
+
+
+
 <body class="html front not-logged-in two-sidebars page-node i18n-en"
 	style="" background="images/backgroung2.jpg">
 	<div id="skip-link">
@@ -336,7 +341,7 @@
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
 									href="http://192.168.0.79:8085/DiharIntranet/adminlogin.jsp"
-									title="">ADMIN Login</a></li>
+									title="">ADMIN ALLIED Login</a></li>
 							</ul></li>
 						<li class="expanded dropdown"><a
 							href="http://www.upsc.gov.in/government-user" title=""
@@ -356,13 +361,14 @@
 									href="http://192.168.0.79:8085/DiharIntranet/drtclogin.jsp">DRTC
 										Login</a></li>
 							</ul></li>
+							
 						<li class="expanded dropdown"><a
 							href="http://www.upsc.gov.in/government-user" title=""
 							data-target="#" class="dropdown-toggle" data-toggle="dropdown">ROOT<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/rootlogin.jsp">ROOT
+									href="http://192.168.0.79:8085/DiharIntranet/rootlogin.jsp">ROOT USER
 										Login</a></li>
 							</ul></li>
 
@@ -545,7 +551,7 @@
 
 		<h5>
 			<font color="#cc9900">
-				<b>|------------------------HEADING------------------------|--------TYPE--------|---------DOWNLOAD--------|</b></font>
+				<b>|--------------------------------HEADING-------------------------------|--------TYPE--------|----DOWNLOAD-----|</b></font>
 		</h5>
 
 
@@ -613,8 +619,8 @@
 										<!-- <td><c:out value="${notificationdata.noti_id}" /></td> -->
 										<td><input type="hidden" name="noti_id" value="${notificationdata.noti_id}" height="1" width="1"></td>
 
-										<td><c:out value="${notificationdata.noti_heading}" /></td>
-										<td><c:out value="${notificationdata.noti_type}" /></td>
+										<td><c:out value="-->${notificationdata.noti_heading}" /></td>
+										<td><font colour="blue"><c:out value="${notificationdata.noti_type}" /></font></td>
 										<td><c:out value="${notificationdata.noti_added_by}" /></td>
 										<td>
 											<button type="submit" class="login__submit"

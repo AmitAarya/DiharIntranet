@@ -8,8 +8,8 @@ import org.apache.struts.action.ActionMapping;
 public class DrtcLoginForm extends ActionForm {
 	 
     private static final long serialVersionUID = 1L;
-    private String userName = null;
-    private String password = null;
+    private static  String userName = null;
+    private static String password = null;
  
     public String getUserName() {
         return userName;
