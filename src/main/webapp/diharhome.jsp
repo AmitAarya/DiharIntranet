@@ -20,6 +20,7 @@
 	class="js bootstrap-anchors-processed"
 	content="text/html; charset=UTF-8">
 	
+	
 <head profile="http://www.w3.org/1999/xhtml/vocab">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -165,19 +166,6 @@
 				visit help page"</noscript>
 			<div class="wrapper common-wrapper">
 				<div class="container common-container">
-					<div class="common-left clearfix">
-						<ul>
-							<li class="gov-india"></li>
-							<li class="ministry"></li>
-							<li class=""></li>
-							<li class="ico-sitemap"><a
-								href="http://www.upsc.gov.in/site-map" title="Sitemap">SiteMap</a></li>
-							<li class="">|</li>
-							<li class="ico-skip"><a
-								href="http://www.upsc.gov.in/#skipCont"
-								title="Skip to main content">Skip to main content</a></li>
-						</ul>
-					</div>
 					<div class="top-search">
 						<ul>
 							<li><form class="form-search content-search"
@@ -278,10 +266,8 @@
 		<div class="row">
 			<div class="col-md-8 col-xs-8 col-sm-8">
 				<h1 class="logo">
-					<a href="http://192.168.0.79:8085/DiharIntranet/"><font
-						color="#000066"><strong>रक्षा उच्च तुंगता अनुसंधान
-								संस्थान</strong></font> <font color="#cc3300"><span>DEFENCE
-								INSTITUTE OF HIGH ALTITUDE RESEARCH</span></font></a>
+					<a href=""><font
+						color="#000066"><strong>रक्षा उच्च तुंगता अनुसंधान संस्थान</strong></font> <font color="#cc3300"><span>DEFENCE INSTITUTE OF HIGH ALTITUDE RESEARCH</span></font></a>
 				</h1>
 			</div>
 
@@ -315,56 +301,51 @@
 					<ul class="menu nav">
 						<li class="first leaf active"><a
 							href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp"
-							title="" class="active"><i class="fa fa-home">HOME</i></a></li>
-						<li class="expanded dropdown active"><a
-							href="http://www.upsc.gov.in/" title="" data-target="#"
-							class="dropdown-toggle active" data-toggle="dropdown">DSA<span
+							title="" class="active"><i class="fa fa-home">Home</i></a></li>
+						
+						<li class="expanded dropdown"><a
+							href="http://www.upsc.gov.in/government-user" title=""
+							data-target="#" class="dropdown-toggle" data-toggle="dropdown">Publication<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/dsalogin.jsp">DSA
-										Login</a></li>
-							</ul></li>
-						<li class="expanded dropdown active"><a
-							href="http://www.upsc.gov.in/" title="" data-target="#"
-							class="dropdown-toggle active" data-toggle="dropdown">DIRECTOR<span
-								class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/directorlogin.jsp"
-									title="">DIRECTOR Login</a></li>
-							</ul></li>
-						<li class="expanded dropdown active"><a
-							href="http://www.upsc.gov.in/" title="" data-target="#"
-							class="dropdown-toggle active" data-toggle="dropdown">ADMIN<span
-								class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/adminlogin.jsp"
-									title="">ADMIN ALLIED Login</a></li>
+									href="http://192.168.0.79:8085/DiharIntranet/publication.jsp">Publication</a></li>
 							</ul></li>
 						<li class="expanded dropdown"><a
 							href="http://www.upsc.gov.in/government-user" title=""
-							data-target="#" class="dropdown-toggle" data-toggle="dropdown">DRDS<span
+							data-target="#" class="dropdown-toggle" data-toggle="dropdown">Newsletter<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/drdslogin.jsp">DRDS
-										Login</a></li>
+									href="https://www.drdo.gov.in/drdo/English/index.jsp?pg=newsletter.jsp">DRDO Newsletter</a></li>
 							</ul></li>
-						<li class="expanded dropdown"><a
-							href="http://www.upsc.gov.in/government-user" title=""
-							data-target="#" class="dropdown-toggle" data-toggle="dropdown">DRTC<span
+						
+						<li class="expanded dropdown active"><a
+							href="http://www.upsc.gov.in/" title="" data-target="#"
+							class="dropdown-toggle active" data-toggle="dropdown">Login<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/drtclogin.jsp">DRTC
+									href="EmpLogin.jsp">DSA
 										Login</a></li>
+								<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">DIRECTOR Login</a></li>
+										
+										<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">ADMIN ALLIED Login</a></li>
+										<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">DRDS	Login</a></li>
+										<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">DRTC	Login</a></li>		
+					
+										
 							</ul></li>
+													
+						
 							
 						<li class="expanded dropdown"><a
 							href="http://www.upsc.gov.in/government-user" title=""
-							data-target="#" class="dropdown-toggle" data-toggle="dropdown">ROOT<span
+							data-target="#" class="dropdown-toggle" data-toggle="dropdown">Root<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
@@ -376,10 +357,6 @@
 
 				</div>
 			</div>
-
-
-
-
 
 		</div>
 		</nav>
@@ -780,22 +757,22 @@
 				<div class="container footer-top-container">
 					<ul class="menu nav">
 						<li class="first leaf"><a
-							href="http://www.upsc.gov.in/website-policy" title="">Website
+							href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Website
 								Policies</a></li>
-						<li class="leaf"><a href="http://www.upsc.gov.in/help"
+						<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp"
 							title="">Help</a></li>
-						<li class="leaf"><a href="http://www.upsc.gov.in/contact-us"
+						<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp"
 							title="">Contact us</a></li>
 						<li class="leaf"><a
-							href="http://www.upsc.gov.in/web-information-manager" title="">Web
+							href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Web
 								Information Manager</a></li>
-						<li class="leaf"><a href="http://www.upsc.gov.in/feedback"
+						<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp"
 							title="">Feedback</a></li>
 						<li class="leaf"><a
-							href="http://www.upsc.gov.in/privacy-policy" title="">Privacy
+							href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Privacy
 								Policy</a></li>
 						<li class="last leaf"><a
-							href="http://www.upsc.gov.in/disclaimer-">Disclaimer</a></li>
+							href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp">Disclaimer</a></li>
 					</ul>
 				</div>
 			</div>
@@ -805,7 +782,7 @@
 						<div class="copyright-content">
 							Website Content Managed by © DIHAR HQ. LEH, India. <span>Designed,
 								Developed by <font color="#000066"><a
-									href="http://www.shermanindia.com/" title="Amit Kumar"
+									href="" title="Amit Kumar"
 									target="_blank">Amit Kumar STA 'B'</a></font>
 							</span> <span class="lastupdated">Last Updated 27 Mar 2018</span>
 						</div>

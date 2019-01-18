@@ -12,8 +12,8 @@ public class LoginDao {
 		DbConnection dbcon = DbConnection.getInstance();
 		ResultSet rs = dbcon.executeQuery(dbcon.getConnection(), DbQuery.DmlQuery.COMMON_LOGIN_DATA);
 		rs.next();
-		if (username == null || password == null || !username.equalsIgnoreCase(rs.getString(1))
-				|| !password.equals(rs.getString(2))) {
+		if (username != null && password != null && username.equalsIgnoreCase(rs.getString(1))
+				&& password.equals(rs.getString(2))) {
 			return true;
 		}
 		return false;

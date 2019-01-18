@@ -19,9 +19,10 @@ public class LoginAction extends Action {
 		LoginForm loginForm = (LoginForm) form;
 
 		if ( new LoginDao().isVerifyLoginData(loginForm.getUserName(),loginForm.getPassword())) {   
-			return mapping.findForward("failure");
-		} else
 			return mapping.findForward("success");
+			
+		} else
+			return mapping.findForward("failure");
 	}
 
 }

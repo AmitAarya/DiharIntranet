@@ -14,13 +14,15 @@ public class TxnDao {
 
 	public boolean isTxnPerformed(String txnType, String txnTypeSubCatagory, String applicantId,String hodCadre, String hodName,
 			FormFile txnFile, String remarks) {
+		int a=0;
 		try {
-			int a=0;
 			String fileName  = txnFile.getFileName();
 			byte[] fileData  = txnFile.getFileData();	
 			String txnId=String.valueOf(ReusableStaticMethods.getTxnId());
 			String applicantCadre=ReusableStaticMethods.getApplicantCadre(applicantId);
-			String hodId="2";
+			String hidIdAndCadre[] =ReusableStaticMethods.getHodId(hodName).split(" ");
+			String hodId=hidIdAndCadre[0];
+			hodCadre=hidIdAndCadre[1];
 			
 			
 			String[] extention_array = txnFile.getFileName().split("\\.");

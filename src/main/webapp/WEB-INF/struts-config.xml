@@ -13,7 +13,9 @@
 		<form-bean name="AdminLoginForm" type="com.dihar.admin.form.AdminLoginForm" />
 		<form-bean name="RootLoginForm" type="com.dihar.root.form.RootLoginForm" />
 		<form-bean name="StoreLoginForm" type="com.dihar.store.form.StoreLoginForm" />
-	
+	     
+	     <form-bean name="EmployeeLoginForm" type="com.dihar.common.login.form.EmployeeLoginForm" />
+	     
 		<form-bean name="FileUploadForm" type="com.dihar.common.fileupload.form.FileUploadForm" />
 		<form-bean name="NotificationDownloadForm" type="com.dihar.common.fileupload.form.NotificationDownloadForm" />
 		
@@ -27,9 +29,11 @@
 		<form-bean name="TxnForm" type="com.dihar.common.txn.form.TxnForm" />
         <form-bean name="TxnFileDownloadForm" type="com.dihar.common.txn.form.TxnFileDownloadForm" />
 			
-		<form-bean name="TxnFileUploadForm" type="com.dihar.common.txn.form.TxnFileUploadForm" />	
+		<form-bean name="TxnFileUploadForm" type="com.dihar.common.txn.form.TxnFileUploadForm" />
 		
+		<form-bean name="AddPublicationForm" type="com.dihar.root.form.AddPublicationForm" />	
 		
+		<form-bean name="PublicationDownloadForm" type="com.dihar.common.fileupload.form.PublicationDownloadForm" />	
 			
 			
 	</form-beans>
@@ -39,6 +43,14 @@
 			input="/Welcome.jsp">
 			<forward name="failure" path="/Welcome.jsp" redirect="true" />
 			<forward name="success" path="/diharhome.jsp" redirect="true" />
+		</action>
+		
+		
+		<action name="EmployeeLoginForm" path="/emplogin"
+			type="com.dihar.common.login.action.EmployeeLoginAction" scope="request"
+			input="/EmpLogin.jsp">
+			<forward name="failure" path="/diharhome.jsp" redirect="true" />
+			<forward name="success" path="/EmpWelcome.jsp" redirect="true" />
 		</action>
 
 		<action name="DsaLoginForm" path="/dsalogin"
@@ -90,7 +102,7 @@
 
 		<action name="FileUploadForm" path="/fileupload"
 			type="com.dihar.common.fileupload.action.FileUploadAction" scope="request"
-			input="/upload.jsp">
+			input="/EmpWelcome.jsp">
 			<forward name="failure" path="/error.jsp" redirect="true" />
 			<forward name="success" path="/sucess.jsp" redirect="true" />
 		</action>
@@ -183,6 +195,23 @@
 			<forward name="failure" path="/UserRegistrationError.jsp" redirect="true" />
 			<forward name="success" path="/*" redirect="true" />
 		</action>
+		
+		
+		<action name="AddPublicationForm" path="/addpublication"
+			type="com.dihar.root.action.AddPublicationAction" scope="request"
+			input="/AddPublication.jsp">
+			<forward name="failure" path="/publicationuploaderror.jsp" redirect="true" />
+			<forward name="success" path="/publicationuploadsucess.jsp" redirect="true" />
+		</action>
+
+<action name="PublicationDownloadForm" path="/publicationfiledownload"
+			type="com.dihar.common.fileupload.action.PublicationDownloadAction" scope="request"
+			input="/publication.jsp">
+			<forward name="failure" path="/publicationdownloaderror.jsp" redirect="true" />
+			<forward name="success" path="/*" redirect="true" />
+		</action>
+
+
 
 	</action-mappings>
 </struts-config>

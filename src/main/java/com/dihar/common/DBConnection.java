@@ -154,7 +154,7 @@ public class DbConnection {
 		try {
 			conn = getConnection();
 			stmt = conn.createStatement();
-			stmt.executeUpdate(DbQuery.DdlQuery.TXN_RETURN_MASTER);
+			stmt.executeUpdate(DbQuery.DdlQuery.PUBLICATION_MASTER);
 			//stmt.executeUpdate(DbQuery.DdlQuery.TXN_MASTER);
 			//stmt.executeUpdate(DbQuery.DdlQuery.ROOT_MASTER);
 			//stmt.executeUpdate(DbQuery.DdlQuery.DIRECTOR_MASTER);

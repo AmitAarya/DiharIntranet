@@ -50,6 +50,11 @@ public class DbQuery {
 				+ "   noti_id VARCHAR(30) PRIMARY KEY, noti_heading VARCHAR(2000) NOT NULL, noti_type VARCHAR(30) NOT NULL, noti_file_name VARCHAR(500) NOT NULL,noti_file BLOB NOT NULL, noti_file_extension VARCHAR(30) NOT NULL, noti_adding_date DATE NOT NULL, noti_added_by VARCHAR(30) NOT NULL"
 				+ ")";
 
+		public static final String PUBLICATION_MASTER = "create table publication_master ( "
+				+ "   publication_id VARCHAR(30) PRIMARY KEY, publication_heading VARCHAR(2000) NOT NULL, publication_year VARCHAR(30) NOT NULL,publication_author VARCHAR(500) NOT NULL, publication_file_name VARCHAR(500) NOT NULL,publication_file BLOB NOT NULL, publication_file_extension VARCHAR(30) NOT NULL, publication_adding_date DATE NOT NULL, publication_added_by VARCHAR(30) NOT NULL"
+				+ ")";
+		
+		
 		public static final String TXN_MASTER = "create table txn_master ( "
 				+ "   txn_id VARCHAR(30)  PRIMARY KEY , txn_date DATE NOT NULL, txn_type VARCHAR(30) NOT NULL, txn_type_subcatagory VARCHAR(30) NOT NULL, txn_applicant_cadre VARCHAR(30) NOT NULL, txn_applicant_id VARCHAR (30),txn_hod_cadre VARCHAR(30),txn_hod_id VARCHAR(30),txn_file_name VARCHAR(500) NOT NULL,txn_file BLOB NOT NULL,txn_file_extension VARCHAR(30) NOT NULL, txn_remarks VARCHAR(300), txn_status VARCHAR(30))";
 
@@ -71,6 +76,7 @@ public class DbQuery {
 		public static final String DRTC_LOGIN_DATA = "select login_id, login_password from login_master where login_id=? and login_type='DRTC' and status='ACTIVE'";
 		
 		public static final String ROOT_LOGIN_DATA = "select login_id, login_password from login_master where login_id=? and status='ACTIVE'";
+		public static final String EMP_LOGIN_DATA = "select login_id, login_password from login_master where login_id=? and status='ACTIVE'";
 
 	}
 

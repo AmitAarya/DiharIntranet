@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 <meta name="Generator" content="Drupal 7 (http://drupal.org)">
-  <title>What's New | UPSC</title>
+  <title>What's New | DIHAR</title>
   <link type="text/css" rel="stylesheet" href="./What&#39;s New _ UPSC_files/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all">
 <link type="text/css" rel="stylesheet" href="./What&#39;s New _ UPSC_files/css_u9Cn6xFPfn6NvRqMGUV6k10stVTR4AGT7eontS75hX4.css" media="all">
 <link type="text/css" rel="stylesheet" href="./What&#39;s New _ UPSC_files/css_nFHqLp9HxaWMsvdlBR5CpwK2XX2f_EGKFy2b6e0SyTM.css" media="all">
@@ -82,10 +82,7 @@
 <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"upsc","theme_token":"NQIeEqyz9g2ahl4GobwzGVEhJvLnG6FQ7VSv9phi534","js":{"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/libraries\/respondjs\/respond.min.js":1,"sites\/all\/modules\/contributed\/jquery_update\/replace\/jquery\/1.10\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"0":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/js\/font-size.js":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/js\/framework.js":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/js\/swithcer.js":1,"sites\/all\/modules\/cmf\/goisearch\/js\/custom_result_jsversion.js":1,"sites\/all\/modules\/cmf\/goisearch\/js\/auto_jsversion.js":1,"1":1,"sites\/all\/modules\/contributed\/views_bootstrap\/js\/views-bootstrap-carousel.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/affix.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/alert.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/button.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/carousel.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/collapse.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/dropdown.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/modal.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/tooltip.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/popover.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/scrollspy.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/tab.js":1,"sites\/all\/themes\/upsc\/bootstrap\/js\/transition.js":1,"sites\/all\/themes\/upsc\/js\/custom.js":1,"sites\/all\/themes\/upsc\/js\/jquery_1.12.4.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/contributed\/date\/date_api\/date.css":1,"sites\/all\/modules\/contributed\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contributed\/views\/css\/views.css":1,"sites\/all\/modules\/contributed\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/base.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/font.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/flexslider.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/base-responsive.css":1,"sites\/all\/modules\/cmf\/cmf_content\/assets\/css\/font-awesome.min.css":1,"sites\/all\/modules\/contributed\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/cmf\/goisearch\/css\/custom_result.css":1,"http:\/\/goisas.nic.in\/content\/scripts\/jquery.1.8.7\/themes\/base\/jquery.ui.all.css":1,"sites\/all\/modules\/cmf\/goisearch\/css\/add-css.css":1,"sites\/all\/modules\/contributed\/panels\/css\/panels.css":1,"sites\/all\/themes\/upsc\/css\/style.css":1}},"encrypt_submissions":{"baseUrl":"http:\/\/www.upsc.gov.in"},"urlIsAjaxTrusted":{"\/whats-new":true},"viewsBootstrap":{"carousel":{"1":{"id":1,"name":"main_slider","attributes":{"interval":5000,"pause":false}}}},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":0,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
 </head>
 <body class="html not-front not-logged-in no-sidebars page-whats-new i18n-en" style="">
-  <div id="skip-link">
-    <a href="http://www.upsc.gov.in/whats-new#main-content" class="element-invisible element-focusable">Skip to main content</a>
-  </div>
-    
+  
 
 <!-- THEME DEBUG -->
 <!-- CALL: theme('page') -->
@@ -96,120 +93,12 @@
 <!-- BEGIN OUTPUT from 'sites/all/themes/upsc/templates/page.tpl.php' -->
 
 <header>
-        <div class="header-fixed clearfix">
-      
-
-<!-- THEME DEBUG -->
-<!-- CALL: theme('region') -->
-<!-- FILE NAME SUGGESTIONS:
-   * region--top-header.tpl.php
-   x region.tpl.php
--->
-<!-- BEGIN OUTPUT from 'modules/system/region.tpl.php' -->
-  <div class="region region-top-header">
-    
-
-<!-- THEME DEBUG -->
-<!-- CALL: theme('block') -->
-<!-- FILE NAME SUGGESTIONS:
-   * block--cmf-content--header-region-block.tpl.php
-   * block--cmf-content.tpl.php
-   * block--top-header.tpl.php
-   x block.tpl.php
--->
-<!-- BEGIN OUTPUT from 'sites/all/themes/bootstrap/theme/block/block.tpl.php' -->
-<section id="block-cmf-content-header-region-block" class="block block-cmf-content clearfix">
-
-      
-  <noscript class="no_scr">"JavaScript is a standard programming language that is included to provide interactive features, Kindly enable Javascript in your browser. For details visit help page"
-     </noscript><div class="wrapper common-wrapper">
-  <div class="container common-container">
-      <div class="common-left clearfix">
-          <ul>
-              <li class="gov-india"></li><li class="ministry"> </li><li class=""></li> <li class="ico-sitemap"><a href="http://www.upsc.gov.in/site-map" title="Sitemap">SiteMap</a></li> <li class="">|</li><li class="ico-skip"><a href="http://www.upsc.gov.in/whats-new#skipCont" title="Skip to main content">Skip to main content</a></li></ul></div><div class="top-search"><ul><li><form class="form-search content-search" action="http://www.upsc.gov.in/whats-new" method="post" id="search-block-form" accept-charset="UTF-8"><div>
-
-<!-- THEME DEBUG -->
-<!-- CALL: theme('search_block_form') -->
-<!-- BEGIN OUTPUT from 'sites/all/themes/bootstrap/theme/search/search-block-form.tpl.php' -->
-<div>
-      <h2 class="element-invisible">Search form</h2>
-    <div class="input-group"><input title="Enter the terms you wish to search for." placeholder="Search - Keyword, Phrase" class="form-control form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128"><span class="input-group-btn"><button type="submit" class="btn btn-default">Search</button></span></div><button class="element-invisible btn btn-primary form-submit" id="edit-submit" name="op" value="Search" type="submit">Search</button>
-<input type="hidden" name="form_build_id" value="form-5Mj-fmHuX-M5F38tgW6lLDfHZPIGfwEBVICpfpqkEGQ">
-<input type="hidden" name="form_id" value="search_block_form">
-</div>
-
-<!-- END OUTPUT from 'sites/all/themes/bootstrap/theme/search/search-block-form.tpl.php' -->
-
-</div></form></li></ul>
-           
-        </div>
-        <div class="common-right clearfix">
-          <ul id="header-nav">
-                            
-             						
-								
-									
-								
-
-
-
-
-                               <li> <a onclick="set_font_size(&#39;increase&#39;)" title="Increase font size" href="javascript:void(0);">A<sup>+</sup></a> </li>
-                        <li> <a onclick="set_font_size()" title="Reset font size" href="javascript:void(0);">A<sup>&nbsp;</sup></a> </li>
-                        <li> <a onclick="set_font_size(&#39;decrease&#39;)" title="Decrease font size" href="javascript:void(0);">A<sup>-</sup></a> </li>
-        <li> <a href="javascript:void(0);" class="high-contrast dark" title="High Contrast">A</a> </li>
-       <li> <a href="javascript:void(0);" class="high-contrast light" title="Normal Contrast" style="display: none;">A</a> </li>
-
-
-         
-                
-                  <li class="hindi"><a target="_blank" href="http://www.upsc.gov.in/hi/whats-new" class="alink">हिन्दी</a></li>
-                  	
-            </ul>
-        </div>
-    </div>
-</div>
-</section> <!-- /.block -->
-
-<!-- END OUTPUT from 'sites/all/themes/bootstrap/theme/block/block.tpl.php' -->
-
-
-
-<!-- THEME DEBUG -->
-<!-- CALL: theme('block') -->
-<!-- FILE NAME SUGGESTIONS:
-   * block--block--10.tpl.php
-   * block--block.tpl.php
-   * block--top-header.tpl.php
-   x block.tpl.php
--->
-<!-- BEGIN OUTPUT from 'sites/all/themes/bootstrap/theme/block/block.tpl.php' -->
-<section id="block-block-10" class="block block-block clearfix">
-
-      
-  <style type="text/css">
-<!--/*--><![CDATA[/* ><!--*/
-
-#messages {
-    display: none;
-}
-
-/*--><!]]>*/
-</style>
-</section> <!-- /.block -->
-
-<!-- END OUTPUT from 'sites/all/themes/bootstrap/theme/block/block.tpl.php' -->
-
-  </div>
-
-<!-- END OUTPUT from 'modules/system/region.tpl.php' -->
-
-    </div>
+        
   <section class="wrapper header-wrapper fontSize" style="font-size: 100%;">
   <div class="container header-container">
   <div class="row">
   <div class="col-md-8 col-sm-8">
-      <h1 class="logo"><a href="http://www.upsc.gov.in/whats-new#"><font color="#000066"><strong>रक्षा उच्च तुंगता अनुसंधान  संस्थान</strong></font><font color="#cc3300"> <span>DEFENCE INSTITUTE OF HIGH ALTITUDE RESEARCH</span></font></a></h1>        
+      <h1 class="logo"><a href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp"><font color="#000066"><strong>रक्षा उच्च तुंगता अनुसंधान  संस्थान</strong></font><font color="#cc3300"> <span>DEFENCE INSTITUTE OF HIGH ALTITUDE RESEARCH</span></font></a></h1>        
     </div>
     
          <div class="col-md-4 col-sm-4 col-xs-6 digital">
@@ -237,59 +126,46 @@
  <!-- Design & Developed By Sujeet Kumar Singh & MD Manouwer -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div id="main-menu">
-                    <ul class="menu nav"><li class="first leaf active"><a href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp" title="" class="active"><i class="fa fa-home">HOME</i></a></li>
-<li class="expanded dropdown active"><a
-							href="http://www.upsc.gov.in/" title="" data-target="#"
-							class="dropdown-toggle active" data-toggle="dropdown">DSA<span
-								class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/dsalogin.jsp">DSA
-										Login</a></li>
-							</ul></li>
+                    <ul class="menu nav"><li class="first leaf active"><a href="http://192.168.0.79:8085/DiharIntranet/diharhome.jsp" title="" class="active"><i class="fa fa-home">Home</i></a></li>
+
 						<li class="expanded dropdown active"><a
 							href="http://www.upsc.gov.in/" title="" data-target="#"
-							class="dropdown-toggle active" data-toggle="dropdown">DIRECTOR<span
+							class="dropdown-toggle active" data-toggle="dropdown">Publication<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/directorlogin.jsp"
-									title="">DIRECTOR Login</a></li>
+									href="http://192.168.0.79:8085/DiharIntranet/dsalogin.jsp">Publication</a></li>
 							</ul></li>
-						<li class="expanded dropdown active"><a
+							
+							<li class="expanded dropdown active"><a
 							href="http://www.upsc.gov.in/" title="" data-target="#"
-							class="dropdown-toggle active" data-toggle="dropdown">ADMIN<span
+							class="dropdown-toggle active" data-toggle="dropdown">Login<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/adminlogin.jsp"
-									title="">ADMIN Login</a></li>
-							</ul></li>
-						<li class="expanded dropdown"><a
-							href="http://www.upsc.gov.in/government-user" title=""
-							data-target="#" class="dropdown-toggle" data-toggle="dropdown">DRDS<span
-								class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/drdslogin.jsp">DRDS
+									href="EmpLogin.jsp">DSA
 										Login</a></li>
+								<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">DIRECTOR Login</a></li>
+										
+										<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">ADMIN ALLIED Login</a></li>
+										<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">DRDS	Login</a></li>
+										<li class="first leaf fontSize" style="font-size: 100%;"><a
+									href="http://192.168.0.79:8085/DiharIntranet/EmpLogin.jsp">DRTC	Login</a></li>		
+					
+										
 							</ul></li>
+	
+							
 						<li class="expanded dropdown"><a
 							href="http://www.upsc.gov.in/government-user" title=""
-							data-target="#" class="dropdown-toggle" data-toggle="dropdown">DRTC<span
+							data-target="#" class="dropdown-toggle" data-toggle="dropdown">Root<span
 								class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/drtclogin.jsp">DRTC
-										Login</a></li>
-							</ul></li>
-						<li class="expanded dropdown"><a
-							href="http://www.upsc.gov.in/government-user" title=""
-							data-target="#" class="dropdown-toggle" data-toggle="dropdown">ROOT<span
-								class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li class="first leaf fontSize" style="font-size: 100%;"><a
-									href="http://192.168.0.79:8085/DiharIntranet/rootlogin.jsp">ROOT
+									href="http://192.168.0.79:8085/DiharIntranet/rootlogin.jsp">ROOT USER
 										Login</a></li>
 							</ul></li>
 
@@ -346,11 +222,6 @@
    x block.tpl.php
 -->
 <!-- BEGIN OUTPUT from 'sites/all/themes/bootstrap/theme/block/block.tpl.php' -->
-<section id="block-easy-breadcrumb-easy-breadcrumb" class="block block-easy-breadcrumb clearfix">
-
-      
-  <div class="easy-breadcrumb"><a href="http://192.168.0.79:8085/DiharIntranet/DiharHome.html" class="easy-breadcrumb_segment easy-breadcrumb_segment-front">Home</a><span class="easy-breadcrumb_segment-separator"> &gt;&gt; </span><a href="http://www.upsc.gov.in/whats-new" class="easy-breadcrumb_segment easy-breadcrumb_segment-title active">What's New</a></div>
-</section> <!-- /.block -->
 
 <!-- END OUTPUT from 'sites/all/themes/bootstrap/theme/block/block.tpl.php' -->
 
@@ -461,20 +332,20 @@
       
   <footer class="wrapper footer-wrapper">
 	<div class="footer-top-wrapper">
-    	<div class="container footer-top-container"><ul class="menu nav"><li class="first leaf"><a href="http://www.upsc.gov.in/website-policy" title="">Website Policies</a></li>
-<li class="leaf"><a href="http://www.upsc.gov.in/help" title="">Help</a></li>
-<li class="leaf"><a href="http://www.upsc.gov.in/contact-us" title="">Contact us</a></li>
-<li class="leaf"><a href="http://www.upsc.gov.in/web-information-manager" title="">Web Information Manager</a></li>
-<li class="leaf"><a href="http://www.upsc.gov.in/feedback" title="">Feedback</a></li>
-<li class="leaf"><a href="http://www.upsc.gov.in/privacy-policy" title="">Privacy Policy</a></li>
-<li class="last leaf"><a href="http://www.upsc.gov.in/disclaimer-">Disclaimer</a></li>
+    	<div class="container footer-top-container"><ul class="menu nav"><li class="first leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Website Policies</a></li>
+<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Help</a></li>
+<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Contact us</a></li>
+<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Web Information Manager</a></li>
+<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Feedback</a></li>
+<li class="leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp" title="">Privacy Policy</a></li>
+<li class="last leaf"><a href="http://192.168.0.79:8085/DiharIntranet/DevelopmentInProgress.jsp">Disclaimer</a></li>
 </ul></div>
     </div>
     <div class="footer-bottom-wrapper">
     	<div class="container footer-bottom-container">
         	<div class="footer-content clearfix "><div class="copyright-content">
             	Website Content Managed by © DIHAR HQ. LEH, India. 
-            <span>Designed, Developed  by  <font color="#000066"><a href="http://www.shermanindia.com/" title="Amit Kumar"
+            <span>Designed, Developed  by  <font color="#000066"><a href="" title="Amit Kumar"
 									target="_blank">Amit Kumar STA 'B'</a></font> <span class="lastupdated">Last Updated 09 April 2018</span>
             </div>
             
